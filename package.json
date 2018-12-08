@@ -1,10 +1,10 @@
 {
   "name": "vuejs-workshop",
   "version": "1.0.0",
-  "description": "sergii.rudchyk@gmail.com",
-  "main": "app.js",
+  "description": "Task for vuejs-workshop",
+  "main": "demo/vue-searchbar.js",
   "scripts": {
-    "serve": "http-server ./"
+    "start": "http-server ./demo/"
   },
   "author": "Sergii Rudchyk <sergii.rudchyk@gmail.com>",
   "license": "MIT",

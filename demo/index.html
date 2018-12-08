@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>VueJS Workshop</title>
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400|Dosis:300">
+    <link rel="stylesheet" href="assets/style.css">
+    <script src="assets/materialize-input.js" defer></script>
+</head>
+<body>
+    <a class="github-link"
+       href="https://github.com/Rudchyk/vuejs-workshop.git"
+       title="Task for vuejs-workshop on github.com"
+       target="_blank"></a>
+    <div class="searchbar"
+        data-js-searchbar
+        v-click-outside="hide">
+        <div class="searchbar__group">
+            <label for="searchbar-field" class="searchbar__label">
+                Search city
+            </label>
+            <input class="searchbar__field"
+                   id="searchbar-field"
+                   type="text"
+                   autocomplete="off"
+                   data-js-materialize-input
+                   v-model="query"
+                   @input="update"
+                   @focus="show" >
+        </div>
+        <ul class="searchbar__autocomplete"
+            v-cloak
+            v-show="isActive">
+            <li class="searchbar__autocomplete-item"
+                v-for="item in items"
+                v-if="item">
+                <a class="searchbar__autocomplete-link"
+                   :href="item.link"
+                   target="_blank">
+                    <span class="searchbar__autocomplete-name"
+                          v-html="highlightedVal(item.name)"></span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-resource/1.5.1/vue-resource.min.js"></script>
+    <script src="vue-directives.js"></script>
+    <script src="vue-searchbar.js"></script>
+</body>
+</html>
