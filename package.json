@@ -2,9 +2,9 @@
   "name": "vuejs-workshop",
   "version": "1.0.0",
   "description": "Task for vuejs-workshop",
-  "main": "demo/vue-searchbar.js",
+  "main": "app/vue-searchbar.js",
   "scripts": {
-    "start": "http-server ./demo/"
+    "start": "http-server ./app/"
   },
   "author": "Sergii Rudchyk <sergii.rudchyk@gmail.com>",
   "license": "MIT",
