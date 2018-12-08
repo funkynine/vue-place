@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="searchbar" data-js-search>
+        <typeahead
+            inline-template
+            min-chars="3"
+            updated-time="300"
+        >
+            <span v-click-outside="hide">
+                <div class="search__group">
+                    <input
+                        type="text"
+                        class="field"
+                        placeholder="Search for city"
+                        autocomplete="off"
+                        autocorrect="off"
+                        autocapitalize="none"
+                        spellcheck="false"
+                        tabindex="1"
+                        v-model="query"
+                        @input="update"
+                        @focus="show"
+                    >
+                    <button
+                        class="btn btn-default"
+                        type="button"
+                        :disabled="!isSubmitActive"
+                        @click="update"
+                    >
+                        Search
+                    </button>
+                </div>
+                <ul
+                    class="autocomplete"
+                    tabindex="0"
+                    v-show="isActive"
+                >
+                    <li
+                        v-for="item in items"
+                        v-if="item"
+                        class="autocomplete__item"
+                    >
+                        <a
+                            :href="item.link"
+                            target="_blank"
+                        >
+                            <span
+                                class="autocomplete__item-name"
+                                v-html="highlightedVal(item.name)"
+                            ></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </typeaheadinline-template>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-resource/1.5.1/vue-resource.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
