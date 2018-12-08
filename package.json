@@ -1,13 +1,17 @@
 {
   "name": "vuejs-workshop",
   "version": "1.0.0",
-  "description": "",
+  "description": "sergii.rudchyk@gmail.com",
   "main": "app.js",
   "scripts": {
     "serve": "http-server ./"
   },
-  "author": "Sergii Rudchyk",
-  "license": "ISC",
+  "author": "Sergii Rudchyk <sergii.rudchyk@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Rudchyk/vuejs-workshop.git"
+  },
   "devDependencies": {
     "http-server": "^0.11.1"
   }
