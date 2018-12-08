@@ -1,5 +1,6 @@
 # vuejs-workshop
 Task for vuejs-workshop
+
 See a live demo [here](http://workshop.rudchyk.pp.ua/).
 
 ## Preparation:
