@@ -48,6 +48,8 @@ highlightedVal: function (value) {
 }
 ```
 
+## Vue.js devtools for Chrome - [Link](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd?utm_source=chrome-ntp-icon)
+
 ## [Vue.js](https://vuejs.org/v2/api/) quick doc access:
 
 ### [Template Syntax](https://vuejs.org/v2/guide/syntax.html)
