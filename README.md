@@ -1,7 +1,7 @@
 # vuejs-workshop
 Task for vuejs-workshop
 
-See a live demo [here](http://workshop.rudchyk.pp.ua/).
+See a [live demo](http://workshop.rudchyk.pp.ua/).
 
 ## Preparation:
 ```
@@ -33,6 +33,19 @@ https://api.teleport.org/api/cities/?search=
 ### Google Map URL
 ```
 https://www.google.com.ua/maps/place/
+```
+
+### Highlighted Value Method
+```js
+highlightedVal: function (value) {
+    if (value) {
+        var regEx = new RegExp(this.query, 'i'),
+            foundValue = value.match(regEx);
+        return value.replace(foundValue, '<strong class="highlight">' + foundValue + '</strong>');
+    } else {
+        return value;
+    }
+}
 ```
 
 ## [Vue.js](https://vuejs.org/v2/api/) quick doc access:
